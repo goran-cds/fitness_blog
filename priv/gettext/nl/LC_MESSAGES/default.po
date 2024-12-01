@@ -1,0 +1,13 @@
+msgid ""
+msgstr ""
+
+#: lib/fitness_blog_web/components/core_components.ex:480
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr "Acties"
+
+#: lib/fitness_blog_web/components/core_components.ex:80
+#: lib/fitness_blog_web/components/core_components.ex:132
+#, elixir-autogen, elixir-format
+msgid "close"
+msgstr "sluiten"

@@ -1,0 +1,147 @@
+## This is a PO Template file.
+##
+## `msgid`s here are often extracted from source code.
+## Add new translations manually only if they're dynamic
+## translations that can't be statically extracted.
+##
+## Run `mix gettext.extract` to bring this file up to
+## date. Leave `msgstr`s empty as changing them here has no
+## effect: edit them in PO (`.po`) files instead.
+## From Ecto.Changeset.cast/4
+msgid "can't be blank"
+msgstr "kan niet leeg zijn"
+
+## From Ecto.Changeset.unique_constraint/3
+msgid "has already been taken"
+msgstr "is al genomen"
+
+## From Ecto.Changeset.put_change/3
+msgid "is invalid"
+msgstr "is ongeldig"
+
+## From Ecto.Changeset.validate_acceptance/3
+msgid "must be accepted"
+msgstr "moet geaccepteerd worden"
+
+## From Ecto.Changeset.validate_format/3
+msgid "has invalid format"
+msgstr "heeft ongeldige opmaak"
+
+## From Ecto.Changeset.validate_subset/3
+msgid "has an invalid entry"
+msgstr "heeft een ongeldige invoer"
+
+## From Ecto.Changeset.validate_exclusion/3
+msgid "is reserved"
+msgstr "is gereserveerd"
+
+## From Ecto.Changeset.validate_confirmation/3
+msgid "does not match confirmation"
+msgstr "komt niet overeen met bevestiging"
+
+## From Ecto.Changeset.no_assoc_constraint/3
+msgid "is still associated with this entry"
+msgstr "is nog steeds geassocieerd met dit item"
+
+msgid "are still associated with this entry"
+msgstr "zijn nog steeds geassocieerd met dit item"
+
+## From Ecto.Changeset.validate_length/3
+msgid "should have %{count} item(s)"
+msgid_plural "should have %{count} item(s)"
+msgstr[0] "zou %{count} item(s) moeten hebben"
+msgstr[1] "zou %{count} item(s) moeten hebben"
+
+msgid "should be %{count} character(s)"
+msgid_plural "should be %{count} character(s)"
+msgstr[0] "moet %{count} teken(s) zijn"
+msgstr[1] "moet %{count} teken(s) zijn"
+
+msgid "should be %{count} byte(s)"
+msgid_plural "should be %{count} byte(s)"
+msgstr[0] "moet %{count} byte(s) zijn"
+msgstr[1] "moet %{count} byte(s) zijn"
+
+msgid "should have at least %{count} item(s)"
+msgid_plural "should have at least %{count} item(s)"
+msgstr[0] "moet minstens %{count} item(s) bevatten"
+msgstr[1] "moet minstens %{count} item(s) bevatten"
+
+msgid "should be at least %{count} character(s)"
+msgid_plural "should be at least %{count} character(s)"
+msgstr[0] "moet minimaal %{count} teken(s) bevatten"
+msgstr[1] "moet minimaal %{count} teken(s) bevatten"
+
+msgid "should be at least %{count} byte(s)"
+msgid_plural "should be at least %{count} byte(s)"
+msgstr[0] "moet minimaal %{count} byte(s) zijn"
+msgstr[1] "moet minimaal %{count} byte(s) zijn"
+
+msgid "should have at most %{count} item(s)"
+msgid_plural "should have at most %{count} item(s)"
+msgstr[0] "mag maximaal %{count} item(s) bevatten"
+msgstr[1] "mag maximaal %{count} item(s) bevatten"
+
+msgid "should be at most %{count} character(s)"
+msgid_plural "should be at most %{count} character(s)"
+msgstr[0] "mag maximaal %{count} teken(s) bevatten"
+msgstr[1] "mag maximaal %{count} teken(s) bevatten"
+
+msgid "should be at most %{count} byte(s)"
+msgid_plural "should be at most %{count} byte(s)"
+msgstr[0] "mag maximaal %{count} byte(s) zijn"
+msgstr[1] "mag maximaal %{count} byte(s) zijn"
+
+## From Ecto.Changeset.validate_number/3
+msgid "must be less than %{number}"
+msgstr "moet kleiner zijn dan %{number}"
+
+msgid "must be greater than %{number}"
+msgstr "moet groter zijn dan %{number}"
+
+msgid "must be less than or equal to %{number}"
+msgstr "moet kleiner zijn dan of gelijk aan %{number}"
+
+msgid "must be greater than or equal to %{number}"
+msgstr "moet groter zijn dan of gelijk aan %{number}"
+
+msgid "must be equal to %{number}"
+msgstr "moet gelijk zijn aan %{number}"
+
+#: lib/fitness_blog/documents/changesets/document_changeset.ex:30
+#: lib/fitness_blog/documents/changesets/document_changeset.ex:36
+#: lib/fitness_blog/documents/changesets/document_changeset.ex:42
+#: lib/fitness_blog/searches/changesets/search_changeset.ex:30
+#: lib/fitness_blog/searches/changesets/search_changeset.ex:36
+#, elixir-autogen, elixir-format
+msgid "too long"
+msgstr "te lang"
+
+#: lib/fitness_blog/documents/changesets/document_section_changeset.ex:29
+#: lib/fitness_blog/documents/changesets/document_section_changeset.ex:34
+#, elixir-autogen, elixir-format
+msgid "too low"
+msgstr "te laag"
+
+#: lib/fitness_blog/completions/changesets/completion_changeset.ex:29
+#: lib/fitness_blog/completions/changesets/completion_changeset.ex:34
+#: lib/fitness_blog/documents/changesets/document_changeset.ex:29
+#: lib/fitness_blog/documents/changesets/document_changeset.ex:35
+#: lib/fitness_blog/documents/changesets/document_changeset.ex:41
+#: lib/fitness_blog/documents/changesets/document_section_changeset.ex:39
+#: lib/fitness_blog/documents/changesets/document_section_changeset.ex:46
+#: lib/fitness_blog/searches/changesets/search_changeset.ex:29
+#: lib/fitness_blog/searches/changesets/search_changeset.ex:35
+#, elixir-autogen, elixir-format
+msgid "too short"
+msgstr "te kort"
+
+#: lib/fitness_blog_web/live/login_live/login_changeset.ex:30
+#, elixir-autogen, elixir-format
+msgid "invalid email format"
+msgstr "ongeldig e-mailformaat"
+
+#: lib/fitness_blog_web/live/login_live/index.ex:42
+#, elixir-autogen, elixir-format
+msgid "wrong email/password"
+msgstr "verkeerd e-mailadres/wachtwoord"

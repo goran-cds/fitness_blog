@@ -1,0 +1,159 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new messages manually only if they're dynamic
+## messages that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here has no
+## effect: edit them in PO (.po) files instead.
+#
+msgid ""
+msgstr ""
+
+#: lib/fitness_blog_web/live/saved_questions_live/index.ex:40
+#, elixir-autogen, elixir-format
+msgid "Access and manage your saved questions quickly, with the ability to view and reuse previous queries easily."
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:145
+#, elixir-autogen, elixir-format
+msgid "Add context"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:148
+#, elixir-autogen, elixir-format
+msgid "Add specific details to enhance your search, such as mentioning, 'I have a patient with episodes of anxiety'. For instance, 'For patients with anxiety symptoms'."
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:255
+#, elixir-autogen, elixir-format
+msgid "An error occured!"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:221
+#, elixir-autogen, elixir-format
+msgid "Answer to your question based on your knowledge base"
+msgstr ""
+
+#: lib/fitness_blog_web/components/app/topbar/components/desktop_view.ex:32
+#: lib/fitness_blog_web/components/app/topbar/components/desktop_view.ex:38
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:126
+#, elixir-autogen, elixir-format
+msgid "Ask Question"
+msgstr ""
+
+#: lib/fitness_blog_web/live/knowledge_base_live/index.ex:32
+#, elixir-autogen, elixir-format
+msgid "Browse and manage your organization's internal knowledge base, with easy access to key documents."
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:91
+#: lib/fitness_blog_web/live/saved_questions_live/index.ex:50
+#, elixir-autogen, elixir-format
+msgid "Context"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:164
+#, elixir-autogen, elixir-format
+msgid "Enter the question you have in mind, such as asking about signs of anxiety or any other topic you're interested in."
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:161
+#, elixir-autogen, elixir-format
+msgid "Enter your question"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:197
+#, elixir-autogen, elixir-format
+msgid "Finding answers..."
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:136
+#, elixir-autogen, elixir-format
+msgid "How to use Prisma knowledge"
+msgstr ""
+
+#: lib/fitness_blog_web/components/app/topbar/components/desktop_view.ex:59
+#: lib/fitness_blog_web/components/app/topbar/components/desktop_view.ex:68
+#: lib/fitness_blog_web/live/knowledge_base_live/index.ex:29
+#, elixir-autogen, elixir-format
+msgid "Knowledge Base"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:110
+#: lib/fitness_blog_web/live/saved_questions_live/index.ex:56
+#, elixir-autogen, elixir-format
+msgid "Question"
+msgstr ""
+
+#: lib/fitness_blog_web/components/app/topbar/components/desktop_view.ex:44
+#: lib/fitness_blog_web/components/app/topbar/components/desktop_view.ex:53
+#, elixir-autogen, elixir-format
+msgid "Saved Questions"
+msgstr ""
+
+#: lib/fitness_blog_web/live/saved_questions_live/index.ex:37
+#, elixir-autogen, elixir-format
+msgid "Saved questions"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:177
+#, elixir-autogen, elixir-format
+msgid "See results"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:180
+#, elixir-autogen, elixir-format
+msgid "The Prisma Knowledge will display pertinent documents with highlighted paragraphs and page numbers that correspond to your search query."
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:92
+#, elixir-autogen, elixir-format
+msgid "Explain what is your situation"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:111
+#, elixir-autogen, elixir-format
+msgid "Type what you're looking for"
+msgstr ""
+
+#: lib/fitness_blog_web/live/login_live/index.ex:75
+#, elixir-autogen, elixir-format
+msgid "Email"
+msgstr ""
+
+#: lib/fitness_blog_web/live/login_live/index.ex:76
+#, elixir-autogen, elixir-format
+msgid "Enter your Prisma work email"
+msgstr ""
+
+#: lib/fitness_blog_web/live/login_live/index.ex:83
+#, elixir-autogen, elixir-format
+msgid "Enter your password"
+msgstr ""
+
+#: lib/fitness_blog_web/live/login_live/index.ex:87
+#, elixir-autogen, elixir-format
+msgid "Log in"
+msgstr ""
+
+#: lib/fitness_blog_web/live/login_live/index.ex:82
+#, elixir-autogen, elixir-format
+msgid "Password"
+msgstr ""
+
+#: lib/fitness_blog_web/live/saved_questions_live/index.ex:64
+#, elixir-autogen, elixir-format
+msgid "Ask a question"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:68
+#, elixir-autogen, elixir-format
+msgid "Question saved to favourites"
+msgstr ""
+
+#: lib/fitness_blog_web/live/ask_questions_live/index.ex:210
+#, elixir-autogen, elixir-format
+msgid "Save Question"
+msgstr ""
