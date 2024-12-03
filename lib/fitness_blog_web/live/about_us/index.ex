@@ -9,7 +9,7 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
 
   def render(assigns) do
     ~H"""
-    <.page_layout>
+    <.page_layout topbar_opts={[page_selected: :about]}>
       <div class="relative min-h-screen w-full">
         <!-- Banner -->
         <div class="w-full h-48 relative">
@@ -77,7 +77,7 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
             </div>
           </div>
           <div class="flex items-center gap-6">
-            <.small_card title="10+" description="Expert Trainers" img_index={1} />
+            <.small_card title="10+" description="Expert Trainers" img_index={3} />
             <.small_card title="1.000+" description="Total Clients" img_index={2} />
           </div>
           <div class="grid grid-cols-2 w-1/2 shadow-2xl pt-16">

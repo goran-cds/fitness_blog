@@ -9,7 +9,7 @@ defmodule FitnessBlogWeb.Live.LandingPage.Index do
 
   def render(assigns) do
     ~H"""
-    <.page_layout>
+    <.page_layout topbar_opts={[page_selected: :home]}>
       <div class="relative min-h-screen w-full">
         <!-- Background Image -->
         <div

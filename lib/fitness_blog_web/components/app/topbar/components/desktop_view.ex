@@ -3,7 +3,7 @@ defmodule FitnessBlogWeb.Components.App.TopBar.Components.DesktopView do
   use FitnessBlogWeb, :html
   use Gettext, backend: FitnessBlogWeb.Gettext
 
-  attr :page_selected, :atom
+  attr :page_selected, :atom, values: [:home, :about, :services, :blog, :contact]
   attr :color_theme, :atom
 
   def render(assigns) do
@@ -32,31 +32,61 @@ defmodule FitnessBlogWeb.Components.App.TopBar.Components.DesktopView do
         <nav class="flex items-center space-x-6 text-app_main_50 font-medium">
           <.link
             navigate={~p"/"}
-            class="hover:underline hover:decoration-app_main_300 hover:underline-offset-8 text-app_secondary_50 transition duration-300"
+            class={
+              if @page_selected == :home,
+                do:
+                  "underline decoration-app_main_300 underline-offset-8 transition duration-300 text-app_main_500",
+                else:
+                  "hover:underline hover:decoration-app_main_300 hover:underline-offset-8 transition duration-300 text-app_neutral_50"
+            }
           >
             Home
           </.link>
           <.link
             navigate={~p"/about"}
-            class="hover:underline hover:decoration-app_main_300 hover:underline-offset-8 text-app_secondary_50 transition duration-300"
+            class={
+              if @page_selected == :about,
+                do:
+                  "underline decoration-app_main_300 underline-offset-8 transition duration-300 text-app_main_500",
+                else:
+                  "hover:underline hover:decoration-app_main_300 hover:underline-offset-8 transition duration-300 text-app_neutral_50"
+            }
           >
             About Us
           </.link>
           <.link
             navigate={~p"/services"}
-            class="hover:underline hover:decoration-app_main_300 hover:underline-offset-8 text-app_secondary_50 transition duration-300"
+            class={
+              if @page_selected == :services,
+                do:
+                  "underline decoration-app_main_300 underline-offset-8 transition duration-300 text-app_main_500",
+                else:
+                  "hover:underline hover:decoration-app_main_300 hover:underline-offset-8 transition duration-300 text-app_neutral_50"
+            }
           >
             Services
           </.link>
           <.link
             navigate={~p"/blog"}
-            class="hover:underline hover:decoration-app_main_300 hover:underline-offset-8 text-app_secondary_50 transition duration-300"
+            class={
+              if @page_selected == :blog,
+                do:
+                  "underline decoration-app_main_300 underline-offset-8 transition duration-300 text-app_main_500",
+                else:
+                  "hover:underline hover:decoration-app_main_300 hover:underline-offset-8 transition duration-300 text-app_neutral_50"
+            }
           >
             Blog
           </.link>
           <.link
             navigate={~p"/contact"}
-            class="hover:underline hover:decoration-app_main_300 hover:underline-offset-8 text-app_secondary_50 transition duration-300"
+            class={
+              if @page_selected == :contact,
+                do:
+                  "underline decoration-app_main_300 underline-offset-8 transition duration-300 text-app_main_500",
+                else:
+                  "hover:underline hover:decoration-app_main_300 hover:underline-offset-8 transition duration-300 text-app_neutral_50"
+            }
           >
             Contact Us
           </.link>
