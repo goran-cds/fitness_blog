@@ -54,7 +54,7 @@ defmodule FitnessBlogWeb.CoreComponents do
     >
       <div
         id={"#{@id}-bg"}
-        class="bg-hs_neutral_950/90 fixed inset-0 transition-opacity"
+        class="bg-app_neutral_900/90 fixed inset-0 transition-opacity"
         aria-hidden="true"
       />
       <div
@@ -202,7 +202,7 @@ defmodule FitnessBlogWeb.CoreComponents do
   def simple_form(assigns) do
     ~H"""
     <.form :let={f} for={@for} as={@as} {@rest}>
-      <div class="space-y-8 bg-white">
+      <div class="space-y-8">
         <%= render_slot(@inner_block, f) %>
         <div :for={action <- @actions} class="mt-2 flex items-center justify-between gap-6">
           <%= render_slot(action, f) %>
@@ -220,27 +220,27 @@ defmodule FitnessBlogWeb.CoreComponents do
   #     <.button>Send!</.button>
   #     <.button phx-click="go" class="ml-2">Send!</.button>
   # """
-  # attr :type, :string, default: nil
-  # attr :class, :string, default: nil
-  # attr :rest, :global, include: ~w(disabled form name value)
+  attr :type, :string, default: nil
+  attr :class, :string, default: nil
+  attr :rest, :global, include: ~w(disabled form name value)
 
-  # slot :inner_block, required: true
+  slot :inner_block, required: true
 
-  # def button(assigns) do
-  #   ~H"""
-  #   <button
-  #     type={@type}
-  #     class={[
-  #       "phx-submit-loading:opacity-75 rounded-lg bg-zinc-900 hover:bg-zinc-700 py-2 px-3",
-  #       "text-sm font-semibold leading-6 text-white active:text-white/80",
-  #       @class
-  #     ]}
-  #     {@rest}
-  #   >
-  #     <%= render_slot(@inner_block) %>
-  #   </button>
-  #   """
-  # end
+  def button(assigns) do
+    ~H"""
+    <button
+      type={@type}
+      class={[
+        "phx-submit-loading:opacity-75 bg-app_main_500 hover:bg-app_main_400 py-3 px-6",
+        "text-sm font-semibold leading-6 text-white active:text-white/80",
+        @class
+      ]}
+      {@rest}
+    >
+      <%= render_slot(@inner_block) %>
+    </button>
+    """
+  end
 
   @doc """
   Renders an input with label and error messages.

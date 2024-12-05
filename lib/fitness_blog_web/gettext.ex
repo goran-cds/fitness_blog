@@ -20,5 +20,5 @@ defmodule FitnessBlogWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext.Backend, otp_app: :fitness_blog, default_locale: "nl"
+  use Gettext.Backend, otp_app: :fitness_blog, default_locale: "en"
 end

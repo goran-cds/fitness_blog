@@ -242,7 +242,7 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
         <img
           src={"/images/artwork/small-card-#{@img_index}.jpg"}
           alt="Fitness Trainer"
-          class="w-full h-full object-cover opacity-90 transform transition-transform duration-500 group-hover:scale-110"
+          class="w-full h-full object-cover opacity-90 transform transition-transform duration-500 group-hover:scale-110 filter grayscale"
         />
         <!-- Red, White, and Black Accents -->
         <div class="absolute top-1/2 -left-4 flex gap-1" style="transform: rotate(-80deg);">

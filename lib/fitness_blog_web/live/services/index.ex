@@ -29,7 +29,10 @@ defmodule FitnessBlogWeb.Live.Services.Index do
           <!-- Transparent Overlay -->
           <div class="absolute inset-0 bg-app_black bg-opacity-80"></div>
         </div>
-        <div class="bg-app_white w-full flex flex-col gap-y-16 items-center pb-16">
+        <div
+          class="bg-app_white w-full flex flex-col gap-y-16 items-center pb-16"
+          style="background-image: url('/images/artwork/banner-7.jpg'); background-size: 125%; background-position: center;"
+        >
           <div class="h-[50px]"></div>
           <div class="flex flex-col items-center justify-center gap-2">
             <div class="flex flex-col items-center">
@@ -45,40 +48,7 @@ defmodule FitnessBlogWeb.Live.Services.Index do
             <p class="text-sm text-app_neutral_500">
               Choose what fits best for you and the rest we will take care!
             </p>
-            <div class="grid grid-cols-5 gap-8">
-              <div></div>
-              <.card
-                title="Beginner"
-                img_index={1}
-                price={49.99}
-                benefits={["8 week workout program", "Weekly meal plan", "24/7 support"]}
-              />
-              <.card
-                title="Advanced"
-                img_index={2}
-                price={99.99}
-                benefits={[
-                  "16 week workout periodization",
-                  "Bulking and cutting cycles",
-                  "Post workout therapy",
-                  "24/7 support"
-                ]}
-              />
-              <.card
-                title="Premium"
-                img_index={3}
-                price={499.99}
-                benefits={[
-                  "Advanced workouts",
-                  "Complex meal plan",
-                  "Bodybuilding prep",
-                  "DEXA Scans",
-                  "Advanced tracking",
-                  "24/7 support"
-                ]}
-              />
-              <div></div>
-            </div>
+            <.carousel />
           </div>
         </div>
         <div class="bg-app_white w-full flex flex-col gap-y-16 items-center pb-16">
@@ -102,8 +72,95 @@ defmodule FitnessBlogWeb.Live.Services.Index do
             <img src={~p"/images/artwork/cutout-5.png"} class="absolute left-2/3 w-96 z-0" />
           </div>
         </div>
+        <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+
+          // Next/previous controls
+          function plusSlides(n) {
+          showSlides(slideIndex += n);
+          }
+
+          // Thumbnail image controls
+          function currentSlide(n) {
+          showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          }
+        </script>
       </div>
     </.page_layout>
+    """
+  end
+
+  def carousel(assigns) do
+    ~H"""
+    <div class="flex flex-col items-center gap-4">
+      <div class="flex items-center gap-4">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <.card
+              title="Beginner"
+              img_index={1}
+              price={49.99}
+              benefits={["8 week workout program", "Weekly meal plan", "24/7 support"]}
+            />
+          </div>
+
+          <div class="mySlides fade" style="display: none">
+            <.card
+              title="Advanced"
+              img_index={2}
+              price={99.99}
+              benefits={[
+                "16 week workout periodization",
+                "Bulking and cutting cycles",
+                "Post workout therapy",
+                "24/7 support"
+              ]}
+            />
+          </div>
+
+          <div class="mySlides fade" style="display: none">
+            <.card
+              title="Premium"
+              img_index={3}
+              price={499.99}
+              benefits={[
+                "Advanced workouts",
+                "Complex meal plan",
+                "Bodybuilding prep",
+                "DEXA Scans",
+                "Advanced tracking",
+                "24/7 support"
+              ]}
+            />
+          </div>
+        </div>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
     """
   end
 
