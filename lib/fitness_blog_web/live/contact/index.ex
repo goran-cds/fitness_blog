@@ -62,17 +62,18 @@ defmodule FitnessBlogWeb.Live.Contact.Index do
           <div class="flex items-start gap-4 w-2/3">
             <div class="flex flex-col gap-4 w-1/2 p-4">
               <h1 class="text-app_neutral_800 font-bold text-3xl w-full">
-                We are here for help you! To Shape Your Body.
+                We are here to help you shape your fitness goals!
               </h1>
               <p class="w-full text-app_neutral_500">
-                Ready to reach your fitness goals? Our expert trainers are here to guide and support you every step of the way. Whether it's building strength, losing weight, or boosting confidence, we’re in this together.
+                Ready to reach your fitness goals? Our expert trainers are here to guide and support you every step of the way. Whether it's building strength, losing weight, or boosting confidence, we're in this together.
               </p>
               <div class="grid grid-cols-2 gap-8 w-full">
                 <div class="flex flex-col gap-4 items-start">
                   <h1 class="text-xl font-bold text-app_neutral_800">New York City, USA</h1>
                   <div class="bg-app_main_500 h-0.5 w-16"></div>
-                  <p class="text-sm text-app_neutral_500">85 Briston Mint Street,
-                    London, E1 8LG, USA</p>
+                  <p class="text-sm text-app_neutral_500">
+                    85 Briston Mint Street,<br /> London, E1 8LG, USA
+                  </p>
                 </div>
 
                 <div class="flex flex-col gap-4 items-start">
@@ -86,8 +87,7 @@ defmodule FitnessBlogWeb.Live.Contact.Index do
                 <div class="flex flex-col gap-4 items-start">
                   <h1 class="text-xl font-bold text-app_neutral_800">Information</h1>
                   <div class="bg-app_main_500 h-0.5 w-16"></div>
-                  <p class="text-sm text-app_neutral_500">+800-123-4567
-                    fitclub@contact.com</p>
+                  <p class="text-sm text-app_neutral_500">+800-123-4567<br /> fitclub@contact.com</p>
                 </div>
 
                 <div class="flex flex-col gap-4 items-start">
@@ -110,7 +110,7 @@ defmodule FitnessBlogWeb.Live.Contact.Index do
 
             <div class="w-1/2 bg-app_neutral_100 p-4 flex flex-col gap-4">
               <h1 class="text-app_neutral_800 font-bold text-3xl">
-                We are here for help you! To Shape Your Body.
+                Contact us below
               </h1>
               <div class="bg-app_main_500 h-0.5 w-16"></div>
               <.simple_form for={@form} phx-change="validate" phx-submit="submit">

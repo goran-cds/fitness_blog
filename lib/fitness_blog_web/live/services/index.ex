@@ -56,7 +56,7 @@ defmodule FitnessBlogWeb.Live.Services.Index do
 
           <div class="flex flex-col items-center justify-center gap-2">
             <div class="flex flex-col items-center">
-              <div class="w-24 relative inline-block px-2 pt-0.5">
+              <div class="w-26 relative inline-block px-2 pt-0.5">
                 <p class="text-sm text-app_white relative z-10">TIME TABLE</p>
                 <span class="absolute inset-0 bg-red-500 -rotate-2 w-full h-[1.5em] rounded-sm">
                 </span>
