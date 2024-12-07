@@ -52,7 +52,7 @@ COPY lib lib
 COPY assets assets
 
 # build assets
-RUN mix assets.deploy
+RUN mix assets.build
 
 # compile assets
 RUN mix assets.deploy
