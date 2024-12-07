@@ -7,15 +7,7 @@ defmodule FitnessBlog.Release do
   require Logger
 
   def insert_demo_data do
-    with _ <- Application.ensure_all_started(@app),
-         {:ok, _} <- Burohelp.Fixtures.Bootstrap.initialise() do
-      Logger.info("Demo data inserted succesfully")
-      {:ok, "Demo data inserted succesfully"}
-    else
-      error ->
-        Logger.error("Demo data insertion failed to run with error #{inspect(error)}")
-        {:error, error}
-    end
+    {:ok, "Demo data inserted succesfully"}
   end
 
   def migrate do
