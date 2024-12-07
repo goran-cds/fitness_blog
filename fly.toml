@@ -4,7 +4,7 @@
 #
 
 app = 'fitness-blog'
-primary_region = 'fra'
+primary_region = 'otp'
 kill_signal = 'SIGTERM'
 
 [build]
@@ -14,7 +14,7 @@ release_command = '/app/bin/migrate'
 
 [env]
 PHX_HOST = 'fitness-blog.fly.dev'
-PORT = '4000'
+PORT = '8080'
 
 [http_service]
 internal_port = 8080
