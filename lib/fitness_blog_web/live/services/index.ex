@@ -14,7 +14,7 @@ defmodule FitnessBlogWeb.Live.Services.Index do
         <!-- Banner -->
         <div class="w-full h-48 relative">
           <div class="absolute inset-x-1/4 inset-y-8 z-10 flex flex-col items-start gap-8">
-            <h1 class="text-5xl text-app_white font-bold">
+            <h1 class="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl text-app_white font-bold">
               MORE THAN 1000+ SATISFIED CUSTOMERS!
               <span class="underline text-app_main_500 hover:text-app_white transition-all duration-300 ease-in-out">
                 JOIN NOW.
@@ -41,11 +41,11 @@ defmodule FitnessBlogWeb.Live.Services.Index do
                 <span class="absolute inset-0 bg-red-500 -rotate-2 w-full h-[1.5em] rounded-sm">
                 </span>
               </div>
-              <h1 class="text-4xl font-bold text-app_black pt-4">
+              <h1 class="text-center text-4xl font-bold text-app_black pt-4">
                 Exclusive Pricing Plan
               </h1>
             </div>
-            <p class="text-sm text-app_neutral_500">
+            <p class="max-sm:px-4 text-center text-sm text-app_neutral_500">
               Choose what fits best for you and the rest we will take care!
             </p>
             <.carousel />
@@ -53,7 +53,6 @@ defmodule FitnessBlogWeb.Live.Services.Index do
         </div>
         <div class="bg-app_white w-full flex flex-col gap-y-16 items-center pb-16">
           <div class="h-[25px]"></div>
-
           <div class="flex flex-col items-center justify-center gap-2">
             <div class="flex flex-col items-center">
               <div class="w-26 relative inline-block px-2 pt-0.5">
@@ -61,16 +60,21 @@ defmodule FitnessBlogWeb.Live.Services.Index do
                 <span class="absolute inset-0 bg-red-500 -rotate-2 w-full h-[1.5em] rounded-sm">
                 </span>
               </div>
-              <h1 class="text-4xl font-bold text-app_black pt-4">
+              <h1 class="text-center text-4xl font-bold text-app_black pt-4">
                 Weekly Class Schedule
               </h1>
             </div>
-            <p class="text-sm text-app_neutral_500">
+            <p class="text-center text-sm text-app_neutral_500">
               Get in touch with our services by taking a look at our session schedule
             </p>
             <.time_table />
-            <img src={~p"/images/artwork/cutout-5.png"} class="absolute left-2/3 w-96 z-0" />
+            <.mobile_table />
+            <img
+              src={~p"/images/artwork/cutout-5.png"}
+              class="absolute max-2xl:hidden left-2/3 3xl:left-[60%] w-96 z-0"
+            />
           </div>
+          <div class="max-3xl:hidden h-[600px]"></div>
         </div>
         <script>
           let slideIndex = 1;
@@ -166,18 +170,21 @@ defmodule FitnessBlogWeb.Live.Services.Index do
 
   def time_table(assigns) do
     ~H"""
-    <table class="relative">
+    <table class="max-sm:hidden relative w-1/2 lg:w-full">
       <tr>
-        <th class="text-app_white" style="background-color: #343a40;"></th>
-        <th class="text-app_white" style="background-color: #343a40;">Monday</th>
-        <th class="text-app_white" style="background-color: #343a40;">Tuesday</th>
-        <th class="text-app_white" style="background-color: #343a40;">Wednesday</th>
-        <th class="text-app_white" style="background-color: #343a40;">Thursday</th>
-        <th class="text-app_white" style="background-color: #343a40;">Friday</th>
-        <th class="text-app_white" style="background-color: #343a40;">Saturday</th>
+        <th class="text-app_white p-1 lg:p-4" style="background-color: #343a40;"></th>
+        <th class="text-app_white p-1 lg:p-4" style="background-color: #343a40;">Monday</th>
+        <th class="text-app_white p-1 lg:p-4" style="background-color: #343a40;">Tuesday</th>
+        <th class="text-app_white p-1 lg:p-4" style="background-color: #343a40;">Wednesday</th>
+        <th class="text-app_white p-1 lg:p-4" style="background-color: #343a40;">Thursday</th>
+        <th class="text-app_white p-1 lg:p-4" style="background-color: #343a40;">Friday</th>
+        <th class="text-app_white p-1 lg:p-4" style="background-color: #343a40;">Saturday</th>
       </tr>
       <tr>
-        <td class="highlight text-app_neutral_400 font-bold" style="background-color: #212529;">
+        <td
+          class="p-1 lg:p-4 highlight text-app_neutral_400 font-bold"
+          style="background-color: #212529;"
+        >
           6:00 - 8:00
         </td>
         <td style="background-color: #1c1f23;" class="tooltip">
@@ -228,7 +235,10 @@ defmodule FitnessBlogWeb.Live.Services.Index do
         </td>
       </tr>
       <tr>
-        <td class="highlight text-app_neutral_400 font-bold" style="background-color: #212529;">
+        <td
+          class="p-1 lg:p-4 highlight text-app_neutral_400 font-bold"
+          style="background-color: #212529;"
+        >
           10:30 - 12:30
         </td>
         <td style="background-color: #1c1f23;"></td>
@@ -269,7 +279,10 @@ defmodule FitnessBlogWeb.Live.Services.Index do
         </td>
       </tr>
       <tr>
-        <td class="highlight text-app_neutral_400 font-bold" style="background-color: #212529;">
+        <td
+          class="p-1 lg:p-4 highlight text-app_neutral_400 font-bold"
+          style="background-color: #212529;"
+        >
           13:00 - 14:00
         </td>
         <td style="background-color: #1c1f23;" class="tooltip">
@@ -310,7 +323,10 @@ defmodule FitnessBlogWeb.Live.Services.Index do
         <td style="background-color: #1c1f23;"></td>
       </tr>
       <tr>
-        <td class="highlight text-app_neutral_400 font-bold" style="background-color: #212529;">
+        <td
+          class="p-1 lg:p-4 highlight text-app_neutral_400 font-bold"
+          style="background-color: #212529;"
+        >
           18:30 - 19:30
         </td>
         <td style="background-color: #1c1f23;" class="tooltip">
@@ -361,7 +377,10 @@ defmodule FitnessBlogWeb.Live.Services.Index do
         <td style="background-color: #1c1f23;"></td>
       </tr>
       <tr>
-        <td class="highlight text-app_neutral_400 font-bold" style="background-color: #212529;">
+        <td
+          class="p-1 lg:p-4 highlight text-app_neutral_400 font-bold"
+          style="background-color: #212529;"
+        >
           20:00 - 21:00
         </td>
         <td style="background-color: #1c1f23;"></td>
@@ -402,7 +421,10 @@ defmodule FitnessBlogWeb.Live.Services.Index do
         <td style="background-color: #1c1f23;"></td>
       </tr>
       <tr>
-        <td class="highlight text-app_neutral_400 font-bold" style="background-color: #212529;">
+        <td
+          class="p-1 lg:p-4 highlight text-app_neutral_400 font-bold"
+          style="background-color: #212529;"
+        >
           21:30 - 22:30
         </td>
         <td style="background-color: #1c1f23;" class="tooltip">
@@ -453,6 +475,120 @@ defmodule FitnessBlogWeb.Live.Services.Index do
         </td>
       </tr>
     </table>
+    """
+  end
+
+  def mobile_table(assigns) do
+    ~H"""
+    <div class="mobile-schedule flex flex-col gap-8 sm:hidden">
+      <div class="time-slot flex flex-col gap-2">
+        <h3 class="time font-bold">6:00 - 8:00</h3>
+        <div class="activity">
+          <strong class="activity-name text-yellow-400">Yoga</strong>
+          <p class="trainer hover:underline italic">Alice - Yoga Expert</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-blue-400">Crossfit</strong>
+          <p class="trainer hover:underline italic">Bob - Crossfit Specialist</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-red-400">Cardio</strong>
+          <p class="trainer hover:underline italic">Chris - Cardio Enthusiast</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-green-400">Pilates</strong>
+          <p class="trainer hover:underline italic">Dana - Pilates Coach</p>
+        </div>
+      </div>
+
+      <div class="time-slot flex flex-col gap-2">
+        <h3 class="time font-bold">10:30 - 12:30</h3>
+        <div class="activity">
+          <strong class="activity-name text-app_main_500">Bodybuilding</strong>
+          <p class="trainer hover:underline italic">Eve - Bodybuilding Coach</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-yellow-400">Yoga</strong>
+          <p class="trainer hover:underline italic">Alice - Yoga Expert</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-orange-400">Boxing</strong>
+          <p class="trainer hover:underline italic">Frank - Boxing Coach</p>
+        </div>
+      </div>
+
+      <div class="time-slot flex flex-col gap-2">
+        <h3 class="time font-bold">13:00 - 14:00</h3>
+        <div class="activity">
+          <strong class="activity-name text-red-400">Cardio</strong>
+          <p class="trainer hover:underline italic">Chris - Cardio Enthusiast</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-pink-400">Zumba</strong>
+          <p class="trainer hover:underline italic">Grace - Zumba Instructor</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-blue-400">Crossfit</strong>
+          <p class="trainer hover:underline italic">Bob - Crossfit Specialist</p>
+        </div>
+      </div>
+
+      <div class="time-slot flex flex-col gap-2">
+        <h3 class="time font-bold">18:30 - 19:30</h3>
+        <div class="activity">
+          <strong class="activity-name text-blue-400">Crossfit</strong>
+          <p class="trainer hover:underline italic">Bob - Crossfit Specialist</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-pink-400">Zumba</strong>
+          <p class="trainer hover:underline italic">Grace - Zumba Instructor</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-green-400">Pilates</strong>
+          <p class="trainer hover:underline italic">Dana - Pilates Coach</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-yellow-400">Yoga</strong>
+          <p class="trainer hover:underline italic">Alice - Yoga Expert</p>
+        </div>
+      </div>
+
+      <div class="time-slot flex flex-col gap-2">
+        <h3 class="time font-bold">20:00 - 21:00</h3>
+        <div class="activity">
+          <strong class="activity-name text-red-400">Cardio</strong>
+          <p class="trainer hover:underline italic">Chris - Cardio Enthusiast</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-green-400">Pilates</strong>
+          <p class="trainer hover:underline italic">Dana - Pilates Coach</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-pink-400">Zumba</strong>
+          <p class="trainer hover:underline italic">Grace - Zumba Instructor</p>
+        </div>
+      </div>
+
+      <div class="time-slot flex flex-col gap-2">
+        <h3 class="time font-bold">21:30 - 22:30</h3>
+        <div class="activity">
+          <strong class="activity-name text-green-400">Pilates</strong>
+          <p class="trainer hover:underline italic">Dana - Pilates Coach</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-orange-400">Boxing</strong>
+          <p class="trainer hover:underline italic">Frank - Boxing Coach</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-app_main_500">Bodybuilding</strong>
+          <p class="trainer hover:underline italic">Eve - Bodybuilding Coach</p>
+        </div>
+        <div class="activity">
+          <strong class="activity-name text-pink-400">Zumba</strong>
+          <p class="trainer hover:underline italic">Grace - Zumba Instructor</p>
+        </div>
+      </div>
+    </div>
     """
   end
 

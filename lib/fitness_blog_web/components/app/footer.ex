@@ -50,7 +50,7 @@ defmodule FitnessBlogWeb.App.Footer do
       @class,
       "z-10 items-center self-stretch flex xl:hidden w-full flex-col px-5 max-md:max-w-full relative not-printable"
     ]}>
-      <div class="text-[#A9B7B9] rounded-3xl w-full py-4">
+      <div class="text-[#A9B7B9] rounded-3xl w-2/3 2xl:w-full py-4">
         <div class="flex items-center justify-between">
           <p class={[@class, "text-lg"]}>
             © FitClub <%= Date.utc_today().year %>. All rights reserved.
@@ -58,13 +58,10 @@ defmodule FitnessBlogWeb.App.Footer do
         </div>
         <div class={[@class, "flex flex-col space-y-6 py-4"]}>
           <.link>
-            Thing 1
+            Terms and conditions
           </.link>
           <.link>
-            Thing 2
-          </.link>
-          <.link>
-            Thing 3
+            Help support
           </.link>
         </div>
       </div>

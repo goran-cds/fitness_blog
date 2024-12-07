@@ -72,7 +72,7 @@ defmodule FitnessBlogWeb.CoreComponents do
               phx-window-keydown={if @can_exit, do: JS.exec("data-cancel", to: "##{@id}")}
               phx-key="escape"
               phx-click-away={if @can_exit, do: JS.exec("data-cancel", to: "##{@id}")}
-              class="shadow-zinc-700/10 ring-zinc-700/10 relative hidden rounded-2xl bg-white p-14 shadow-lg ring-1 transition"
+              class="shadow-zinc-700/10 ring-zinc-700/10 relative hidden rounded-2xl bg-app_neutral_800 p-14 shadow-lg ring-1 transition"
             >
               <div :if={@can_exit} class="absolute top-6 right-5">
                 <button

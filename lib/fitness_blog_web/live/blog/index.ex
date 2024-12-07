@@ -105,8 +105,34 @@ defmodule FitnessBlogWeb.Live.Blog.Index do
           <!-- Transparent Overlay -->
           <div class="absolute inset-0 bg-app_black bg-opacity-80"></div>
         </div>
-        <div class="bg-app_white w-full flex">
-          <div class="w-1/2 flex flex-col items-end py-16 gap-8">
+        <div class="bg-app_white w-full flex flex-col lg:flex-row">
+          <div class="lg:hidden flex flex-col gap-4 w-full py-16 px-4 2xl:px-16">
+            <.simple_form for={%{}} phx-change="search" class="w-full 2xl:w-1/2">
+              <.input
+                type="text"
+                name="search"
+                placeholder="Search blog posts..."
+                value={@search_query}
+                class="w-full border border-gray-300 rounded-lg px-4 py-2"
+              />
+            </.simple_form>
+            <div class="bg-app_neutral_100 w-full 2xl:w-1/2 flex flex-col gap-4 items-start p-4">
+              <h1 class="text-app_neutral_800 font-bold text-lg">Categories</h1>
+              <div class="bg-app_main_500 h-0.5 w-16"></div>
+              <div class="grid grid-cols-3 gap-2">
+                <%= for category <- [:all, :bodybuilding, :yoga, :crossfit, :pilates, :boxing, :cardio, :zumba] do %>
+                  <button
+                    phx-click="filter_by_category"
+                    phx-value-category={category}
+                    class="px-4 py-2 rounded-md bg-app_neutral_100 shadow-sm text-app_neutral_600 hover:bg-app_main_500 hover:text-app_white transition-all duration-200"
+                  >
+                    <%= Phoenix.Naming.humanize(Atom.to_string(category)) %>
+                  </button>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="w-full 2xl:w-1/2 flex flex-col items-end max-lg:py-0 max-lg:pb-8 py-16 gap-8">
             <%= for blog <- @blogs do %>
               <.blog_card
                 title={blog.title}
@@ -116,8 +142,8 @@ defmodule FitnessBlogWeb.Live.Blog.Index do
               />
             <% end %>
           </div>
-          <div class="flex flex-col gap-4 w-1/2 py-16 px-16">
-            <.simple_form for={%{}} phx-change="search" class="w-1/2">
+          <div class="max-lg:hidden flex flex-col gap-4 w-1/2 py-16 px-4 2xl:px-16">
+            <.simple_form for={%{}} phx-change="search" class="w-full 2xl:w-1/2">
               <.input
                 type="text"
                 name="search"
@@ -126,7 +152,7 @@ defmodule FitnessBlogWeb.Live.Blog.Index do
                 class="w-full border border-gray-300 rounded-lg px-4 py-2"
               />
             </.simple_form>
-            <div class="bg-app_neutral_100  w-1/2 flex flex-col gap-4 items-start p-4">
+            <div class="bg-app_neutral_100 w-full 2xl:w-1/2 flex flex-col gap-4 items-start p-4">
               <h1 class="text-app_neutral_800 font-bold text-lg">Categories</h1>
               <div class="bg-app_main_500 h-0.5 w-16"></div>
               <div class="grid grid-cols-3 gap-2">
@@ -157,7 +183,7 @@ defmodule FitnessBlogWeb.Live.Blog.Index do
 
   def blog_card(assigns) do
     ~H"""
-    <div class="flex flex-col gap-1 items-start w-[600px]">
+    <div class="flex flex-col gap-1 items-start w-full px-4 lg:px-0 lg:w-[700px] 2xl:w-[600px]">
       <div class="overflow-hidden w-full">
         <img
           src={"/images/artwork/blog-#{@img_index}.jpg"}

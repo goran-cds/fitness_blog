@@ -14,6 +14,11 @@ defmodule FitnessBlogWeb.Components.App.TopBar.Index do
       "w-full z-30 top-0 relative sticky"
     ]}>
       <TopBar.Components.DesktopView.render page_selected={@page_selected} color_theme={@color_theme} />
+      <TopBar.Components.MobileView.render page_selected={@page_selected} color_theme={@color_theme} />
+      <TopBar.Components.HamburgerMenu.render
+        page_selected={@page_selected}
+        color_theme={@color_theme}
+      />
     </div>
     """
   end

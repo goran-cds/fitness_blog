@@ -13,14 +13,14 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
       <div class="relative min-h-screen w-full">
         <!-- Banner -->
         <div class="w-full h-48 relative">
-          <div class="absolute inset-x-1/4 inset-y-8 z-10 flex flex-col items-start gap-8">
-            <h1 class="text-5xl text-app_white font-bold">
+          <div class="absolute inset-x-1/4 inset-y-8 z-10 flex flex-col items-start gap-1 sm:gap-8">
+            <h1 class="text-2xl sm:text-5xl text-app_white font-bold">
               WE CHASE ONLY
               <span class="underline text-app_main_500 hover:text-app_white transition-all duration-300 ease-in-out">
                 RESULTS.
               </span>
             </h1>
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-3 sm:gap-6">
               <img src={~p"/images/icons/facebook-logo.svg"} class="w-6 hover:cursor-pointer" />
               <img src={~p"/images/icons/instagram-logo.svg"} class="w-4 hover:cursor-pointer" />
               <img src={~p"/images/icons/tiktok-logo.svg"} class="w-4 hover:cursor-pointer" />
@@ -37,13 +37,13 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
           <div class="absolute inset-0 bg-app_black bg-opacity-80"></div>
         </div>
         <div class="bg-app_white w-full flex flex-col gap-y-16 items-center pb-16">
-          <div class="flex items-start gap-8 w-1/2 py-16">
+          <div class="flex flex-col sm:flex-row items-start gap-8 w-full px-8 2xl:px-0 2xl:w-1/2 py-16">
             <div
-              class="w-full h-96"
-              style="background-image: url('/images/artwork/card-1.jpg'); background-size: cover; background-size: 200%; background-position: 45% 55%;"
+              class="w-full h-[512px] lg:h-96 bg-cover bg-center bg-[length:180%] 2xl:bg-[length:200%] 3xl:bg-[length:100%] bg-[position:45%_55%]"
+              style="background-image: url('/images/artwork/card-1.jpg');"
             >
             </div>
-            <div class="flex flex-col gap-4 items-start justify-center">
+            <div class="flex flex-col max-sm:w-full max-lg:w-3/4 gap-4 items-start justify-center">
               <div>
                 <div class="relative inline-block px-2 pt-0.5">
                   <p class="text-sm text-app_white relative z-10">WHO WE ARE</p>
@@ -76,21 +76,21 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
               </.link>
             </div>
           </div>
-          <div class="flex items-center gap-6">
+          <div class="flex flex-col sm:flex-row items-center gap-4 px-4 lg:px-0 lg:gap-12 2xl:gap-6">
             <.small_card title="10+" description="Expert Trainers" img_index={3} />
             <.small_card title="1.000+" description="Total Clients" img_index={2} />
           </div>
-          <div class="grid grid-cols-2 w-1/2 shadow-2xl pt-16">
-            <div class="flex flex-col items-center justify-center gap-2 px-8 hover:cursor-pointer group">
-              <img src={~p"/images/icons/asset-7.svg"} class="w-24" />
-              <h1 class="text-5xl text-app_black font-bold transition-colors duration-300 group-hover:underline">
+          <div class="grid grid-cols-1 sm:grid-cols-2 w-full px-8 2xl:px-0 2xl:w-1/2 shadow-2xl pt-16">
+            <div class="flex flex-col items-center justify-center gap-2 max-sm:py-4 px-8 hover:cursor-pointer group">
+              <img src={~p"/images/icons/asset-7.svg"} class="w-16 sm:w-24" />
+              <h1 class="text-3xl sm:text-5xl text-app_black font-bold transition-colors duration-300 group-hover:underline">
                 Our history
               </h1>
               <p class="text-app_neutral_400 text-center">
                 From humble beginnings to a thriving community, we've been passionate about helping individuals transform their lives through fitness. Our journey is about dedication, growth, and the belief that everyone deserves the tools to achieve their health goals.
               </p>
             </div>
-            <div class="relative overflow-hidden group">
+            <div class="max-sm:hidden relative overflow-hidden group">
               <img
                 src={~p"/images/artwork/card-2.jpg"}
                 class="w-full h-full object-cover transition-transform duration-500 transform group-hover:scale-110 "
@@ -102,9 +102,9 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
                 class="w-full h-full object-cover transition-transform duration-500 transform group-hover:scale-110 "
               />
             </div>
-            <div class="flex flex-col items-center justify-center gap-2 px-8 hover:cursor-pointer group">
-              <img src={~p"/images/icons/asset-8.svg"} class="w-24" />
-              <h1 class="text-5xl text-app_black font-bold transition-colors duration-300 group-hover:underline">
+            <div class="flex flex-col items-center justify-center gap-2 max-sm:py-4 px-8 hover:cursor-pointer group">
+              <img src={~p"/images/icons/asset-8.svg"} class="w-16 sm:w-24" />
+              <h1 class="text-3xl sm:text-5xl text-app_black font-bold transition-colors duration-300 group-hover:underline">
                 Our mission
               </h1>
               <p class="text-app_neutral_400 text-center">
@@ -119,14 +119,14 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
                 <span class="absolute inset-0 bg-red-500 -rotate-2 w-full h-[1.5em] rounded-sm">
                 </span>
               </div>
-              <h1 class="text-4xl font-bold text-app_black pt-2">
+              <h1 class="max-sm:text-center text-4xl font-bold text-app_black pt-2">
                 Team of expert coaches
               </h1>
             </div>
             <p class="text-sm text-app_neutral_500">Meet the most experienced personal trainers</p>
-            <div class="grid grid-cols-5 gap-8">
-              <div></div>
-              <div class="relative group">
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+              <div class="max-lg:hidden"></div>
+              <div class="relative group max-sm:w-3/4 max-sm:mx-auto">
                 <img
                   src={~p"/images/artwork/stroke-3.png"}
                   class="absolute top-4 w-full rotate-45 filter grayscale group-hover:grayscale-0 transition-all duration-300"
@@ -155,7 +155,7 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
                   </div>
                 </div>
               </div>
-              <div class="relative group">
+              <div class="relative group max-sm:w-3/4 max-sm:mx-auto">
                 <img
                   src={~p"/images/artwork/stroke-3.png"}
                   class="absolute top-4 w-full rotate-45 filter grayscale group-hover:grayscale-0 transition-all duration-300"
@@ -184,7 +184,7 @@ defmodule FitnessBlogWeb.Live.AboutUs.Index do
                   </div>
                 </div>
               </div>
-              <div class="relative group">
+              <div class="relative group max-sm:w-3/4 max-sm:mx-auto">
                 <img
                   src={~p"/images/artwork/stroke-3.png"}
                   class="absolute top-4 w-full rotate-45 filter grayscale group-hover:grayscale-0 transition-all duration-300"

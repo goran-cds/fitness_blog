@@ -43,7 +43,7 @@ defmodule FitnessBlogWeb.Components.Web.Layout.PageLayout do
       </button>
 
       <%!-- Help modal --%>
-      <CoreComponents.modal id="help_modal" width="w-1/2">
+      <CoreComponents.modal id="help_modal" width="w-full sm:w-2/3 lg:w-1/2">
         <CoreComponents.simple_form
           for={to_form(%{})}
           phx-submit={CoreComponents.hide_modal("help_modal")}

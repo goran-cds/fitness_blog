@@ -41,7 +41,7 @@ defmodule FitnessBlogWeb.Live.Contact.Index do
         <!-- Banner -->
         <div class="w-full h-48 relative">
           <div class="absolute inset-x-1/4 inset-y-8 z-10 flex flex-col items-start gap-8">
-            <h1 class="text-5xl text-app_white font-bold">
+            <h1 class="text-3xl sm:text-5xl text-app_white font-bold">
               NEED HELP? CONTACT
               <span class="underline text-app_main_500 hover:text-app_white transition-all duration-300 ease-in-out">
                 US.
@@ -56,11 +56,11 @@ defmodule FitnessBlogWeb.Live.Contact.Index do
           <!-- Transparent Overlay -->
           <div class="absolute inset-0 bg-app_black bg-opacity-80"></div>
         </div>
-        <div class="bg-app_white w-full flex flex-col gap-y-16 items-center pb-16">
-          <div class="h-[50px]"></div>
+        <div class="bg-app_white 2xl:min-h-screen w-full flex flex-col gap-y-16 items-center pb-16">
+          <div class="sm:h-[50px]"></div>
 
-          <div class="flex items-start gap-4 w-2/3">
-            <div class="flex flex-col gap-4 w-1/2 p-4">
+          <div class="flex flex-col sm:flex-row items-start gap-4 w-full px-4 md:px-0 md:w-2/3">
+            <div class="flex flex-col gap-4 w-full sm:w-1/2 p-4">
               <h1 class="text-app_neutral_800 font-bold text-3xl w-full">
                 We are here to help you shape your fitness goals!
               </h1>
@@ -108,7 +108,7 @@ defmodule FitnessBlogWeb.Live.Contact.Index do
               </div>
             </div>
 
-            <div class="w-1/2 bg-app_neutral_100 p-4 flex flex-col gap-4">
+            <div class="w-full sm:w-1/2 bg-app_neutral_100 p-4 flex flex-col gap-4">
               <h1 class="text-app_neutral_800 font-bold text-3xl">
                 Contact us below
               </h1>
