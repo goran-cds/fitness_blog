@@ -54,6 +54,10 @@ COPY assets assets
 # compile assets
 RUN mix assets.deploy
 
+# Format check
+COPY .formatter.exs ./
+RUN mix format --check-formatted
+
 # Compile the release
 RUN mix compile
 
@@ -97,4 +101,5 @@ USER nobody
 # above and adding an entrypoint. See https://github.com/krallin/tini for details
 # ENTRYPOINT ["/tini", "--"]
 
-CMD ["/app/bin/server"]
+# Migrate and start server
+CMD ["sh", "-c", "/app/bin/migrate && exec /app/bin/server"]
