@@ -14,21 +14,16 @@
   <body class="bg-app_root antialiased">
     <%= @inner_content %>
   </body>
-  <%= if assigns[:ga_id] do %>
-    <!-- Google Analytics -->
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
-      ga.l=+new Date;
-      ga('create', '<%= assigns[:ga_id] %>', 'auto');
-      ga('send', 'pageview');
-      document.addEventListener("click", function(e){
-         if(e.target && e.target.dataset.gaTrackClick) {
-          ga('send', 'event', 'link', 'click', e.target.dataset.gaTrackClick);
-         }
-      });
-    </script>
-    <script async src="https://www.google-analytics.com/analytics.js">
-    </script>
-    <!-- End Google Analytics -->
-  <% end %>
+ <%= if assigns[:ga_id] do %>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= assigns[:ga_id] %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '<%= assigns[:ga_id] %>');
+  </script>
+  <!-- End Google Analytics -->
+<% end %>
+
 </html>
