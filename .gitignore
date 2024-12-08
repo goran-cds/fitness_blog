@@ -38,7 +38,6 @@ fitness_blog-*.tar
 # Ignore node modules.
 npm-debug.log
 /assets/node_modules/
-/node_modules/
 
 /volume
 
