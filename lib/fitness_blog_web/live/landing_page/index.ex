@@ -24,9 +24,9 @@ defmodule FitnessBlogWeb.Live.LandingPage.Index do
           <div></div>
           <div class="flex flex-col items-start justify-center col-span-8 sm:col-span-3 lg:col-span-2 pb-36 px-4 lg:px-16">
             <div class="relative inline-block px-4 pt-0.5">
-              <p class="text-sm text-app_black relative z-10">UNLEASH YOUR STRENGTH</p>
+              <p class="text-sm text-app_black relative z-10 pt-1 sm:pt-0">UNLEASH YOUR STRENGTH</p>
               <span
-                class="absolute inset-0 bg-app_white -rotate-2 w-2/3 sm:w-full h-[3rem] sm:h-[1.5em]"
+                class="absolute inset-0 bg-app_white -rotate-2 w-full sm:w-full h-[2rem] sm:h-[1.5em]"
                 style="clip-path: polygon(5% 0%, 95% 0%, 100% 60%, 95% 100%, 10% 90%, 0% 40%);"
               >
               </span>
@@ -65,9 +65,9 @@ defmodule FitnessBlogWeb.Live.LandingPage.Index do
         </div>
       </div>
       <!-- Secondary Content -->
-      <div class="relative bg-app_white w-full flex flex-col items-center">
+      <div class="relative bg-app_white w-full flex flex-col items-center pt-4 sm:pt-0">
         <div
-          id="cards"
+          id="cards-desktop"
           class="max-sm:hidden absolute -top-16 grid grid-cols-3 gap-4 w-full max-lg:px-4 lg:w-3/4 2xl:w-1/2"
         >
           <.card
@@ -86,7 +86,10 @@ defmodule FitnessBlogWeb.Live.LandingPage.Index do
             img_index={6}
           />
         </div>
-        <div id="cards" class="sm:hidden grid grid-cols-1 gap-4 w-full max-lg:px-4 lg:w-3/4 2xl:w-1/2">
+        <div
+          id="cards-mobile"
+          class="sm:hidden grid grid-cols-1 gap-4 w-full max-lg:px-4 lg:w-3/4 2xl:w-1/2"
+        >
           <.card
             title="PROGRESSION"
             description="We'll track your fitness journey and celebrate every milestone. Our progression tools help you monitor your growth and push yourself to new heights."

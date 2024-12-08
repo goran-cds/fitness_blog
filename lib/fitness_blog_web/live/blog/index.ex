@@ -119,7 +119,7 @@ defmodule FitnessBlogWeb.Live.Blog.Index do
             <div class="bg-app_neutral_100 w-full 2xl:w-1/2 flex flex-col gap-4 items-start p-4">
               <h1 class="text-app_neutral_800 font-bold text-lg">Categories</h1>
               <div class="bg-app_main_500 h-0.5 w-16"></div>
-              <div class="grid grid-cols-3 gap-2">
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 <%= for category <- [:all, :bodybuilding, :yoga, :crossfit, :pilates, :boxing, :cardio, :zumba] do %>
                   <button
                     phx-click="filter_by_category"
