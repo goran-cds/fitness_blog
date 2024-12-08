@@ -11,6 +11,6 @@ defmodule FitnessBlogWeb.GoogleAnalytics do
     end
   end
 
-  def call(conn, ga_id: ga_id), do: assign(conn, :ga_id, ga_id)
+  def call(conn, ga_id: ga_id), do: put_session(conn, :ga_id, ga_id)
   def call(conn, _opts), do: conn
 end

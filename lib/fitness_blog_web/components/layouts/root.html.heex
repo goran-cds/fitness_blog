@@ -14,16 +14,16 @@
   <body class="bg-app_root antialiased">
     <%= @inner_content %>
   </body>
- <%= if assigns[:ga_id] do %>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= assigns[:ga_id] %>"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '<%= assigns[:ga_id] %>');
-  </script>
-  <!-- End Google Analytics -->
-<% end %>
-
+  <%= if assigns[:ga_id] do %>
+    <!-- Google Analytics -->
+    <script async src={"https://www.googletagmanager.com/gtag/js?id=#{assigns[:ga_id]}"}>
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<%= assigns[:ga_id] %>');
+    </script>
+    <!-- End Google Analytics -->
+  <% end %>
 </html>
