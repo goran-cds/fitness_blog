@@ -108,8 +108,6 @@
           {Credo.Check.Readability.RedundantBlankLines, []},
           {Credo.Check.Readability.Semicolons, []},
           {Credo.Check.Readability.SpaceAfterCommas, []},
-          # TODO: Re-enable at some point and typespec all functions
-          # {Credo.Check.Readability.Specs, files: %{included: ["lib/burohelp/**/*.ex"]}},
           {Credo.Check.Readability.StringSigils, []},
           {Credo.Check.Readability.TrailingBlankLine, []},
           {Credo.Check.Readability.TrailingWhiteSpace, []},
