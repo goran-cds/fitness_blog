@@ -4,7 +4,8 @@ defmodule FitnessBlogWeb.GoogleAnalytics do
   def init(opts) do
     case Mix.env() do
       :prod ->
-        Keyword.put(opts, :ga_id, "G-C2L965D8HD")
+        ga_id = System.get_env("GA_ID") || "default_value"
+        Keyword.put(opts, :ga_id, ga_id)
 
       _ ->
         opts
