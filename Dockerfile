@@ -51,9 +51,6 @@ COPY lib lib
 
 COPY assets assets
 
-# build assets
-RUN mix assets.build
-
 # compile assets
 RUN mix assets.deploy
 
@@ -91,7 +88,7 @@ ENV MIX_ENV="prod"
 COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/fitness_blog ./
 
 # Copy application essential resources (ie. geo ip database, gender names, etc.)
-COPY --from=builder --chown=nobody:root /app/priv/app_resources /app/priv/app_resources
+# COPY --from=builder --chown=nobody:root /app/priv/app_resources /app/priv/app_resources
 
 USER nobody
 
